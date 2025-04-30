@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Source Code Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Source Code Analyzer</a>
+            <div class="d-flex">
+                <a class="btn btn-outline-light me-2" href="https://github.com/SHAIK-07/End-to-end-Source-Code-Analysis-Generative-AI-main" target="_blank">Project Repo</a>
+                <a class="btn btn-outline-light me-2" href="https://github.com/SHAIK-07" target="_blank">My GitHub</a>
+                <a class="btn btn-outline-light" href="https://www.linkedin.com/in/shaik-hidaythulla-73bb572b9/" target="_blank">My LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid my-4">
+        <div class="row">
+            <!-- Left Side -->
+            <div class="col-md-4 p-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Repository Analysis</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="welcome-message mb-4">
+                            Welcome to the Source Code Analyzer! 🚀✨
+
+                            🔍 I'm your AI-powered code analysis assistant!
+
+                            🎯 What I can do:
+
+                            • Analyze any GitHub repository in detail 📊
+                            • Explain code structure and architecture 🏗️
+                            • Break down complex functions 🔧
+                            • Help understand implementation details ⚙️
+                            • Answer questions about the codebase 💡
+
+                            📝 How to get started:
+
+                            1️⃣ Paste a GitHub repository URL in the left panel
+                            2️⃣ Click "Analyze Repository" button
+                            3️⃣ Wait for analysis to complete ⏳
+                            4️⃣ Ask me anything about the code! 💬
+
+                            🌟 Ready to explore some code? Let's begin! 🎉
+                        </div>
+                        <div id="currentRepoInfo" class="mb-3 d-none">
+                            <div class="d-flex align-items-center justify-content-between bg-light p-2 rounded">
+                                <div class="current-repo-name">
+                                    Current Repository: <span id="repoName" class="fw-bold"></span>
+                                </div>
+                                <button type="button" id="clearButton" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Clear Repository
+                                </button>
+                            </div>
+                        </div>
+                        <form id="repoForm">
+                            <div class="mb-3">
+                                <input type="text" id="repoUrl" class="form-control" 
+                                       placeholder="https://github.com/username/repo" required>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <button type="submit" id="repoSubmitButton" class="btn btn-primary flex-grow-1">
+                                    Analyze Repository
+                                </button>
+                            </div>
+                            <div id="loadingSpinner" class="text-center mt-3 d-none">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Analyzing repository...</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side (Chatbot) -->
+            <div class="col-md-8 p-4">
+                <div class="card chat-card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">ChatBot Assistant</h4>
+                    </div>
+                    <div class="card-body chat-body" id="chatBody">
+                        <!-- Chat messages will be dynamically added here by script.js -->
+                    </div>
+                    <div class="card-footer">
+                        <form id="chatForm" class="d-flex gap-2">
+                            <input type="text" id="chatInput" class="form-control" 
+                                   placeholder="Type your question..." required>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="button" id="clearChatButton" class="btn btn-secondary">
+                                <i class="fas fa-eraser"></i> Clear Chat
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p class="mb-0">© 2024 Source Code Analyzer. Built with ❤️</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
